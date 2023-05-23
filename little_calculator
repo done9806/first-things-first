@@ -1,0 +1,47 @@
+def addieren(a, b):
+    return a + b
+
+def subtrahieren(a, b):
+    return a - b
+
+def multiplizieren(a, b):
+    return a * b
+
+def dividieren(a, b):
+    if b != 0:
+        return a / b
+    else:
+        return "Fehler: Division durch Null ist nicht erlaubt!"
+
+print("Willkommen zum Taschenrechner!")
+
+while True:
+    print("Bitte wählen Sie eine Operation:")
+    print("1. Addieren")
+    print("2. Subtrahieren")
+    print("3. Multiplizieren")
+    print("4. Dividieren")
+    print("5. Beenden")
+
+    auswahl = input("Geben Sie die Nummer der gewünschten Operation ein: ")
+
+    if auswahl == "5":
+        print("Taschenrechner wird beendet.")
+        break
+
+    zahl1 = float(input("Geben Sie die erste Zahl ein: "))
+    zahl2 = float(input("Geben Sie die zweite Zahl ein: "))
+
+    if auswahl == "1":
+        ergebnis = addieren(zahl1, zahl2)
+    elif auswahl == "2":
+        ergebnis = subtrahieren(zahl1, zahl2)
+    elif auswahl == "3":
+        ergebnis = multiplizieren(zahl1, zahl2)
+    elif auswahl == "4":
+        ergebnis = dividieren(zahl1, zahl2)
+    else:
+        print("Ungültige Eingabe. Bitte wählen Sie eine Nummer von 1 bis 5.")
+        continue
+
+    print("Ergebnis: ", ergebnis)
